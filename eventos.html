@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Eventos em Java Scripto </title>
+
+    </head>
+
+    <body>
+        
+        <h1 id='h'>Here we go again</h1>
+
+        <div id="sla">
+            <input type="text" name="nome" id="in1" />
+            
+            <button class="botao">Adicionar</button>
+        </div>
+
+        <script>
+
+            //var inputElement = document.getElementById("in1"); - Retorna o elemento definido pelo id especificado
+            //var inputElement = document.getElementsByTagName("input"); - Retorna os elementos da tag especificada, use [0] para definir qual posicao da tag
+            //var inputElement = document.getElementsByClassName("botao"); - Retorna os elementos da classe especificada, use [0] para definir qual posicao da classe
+           
+           
+            var inputElement = document.querySelector("body div#sla input"); // ("div#sla input") tbm funciona pois sempre estará dentro do body, query selector percorre o local especificado até encontrar o que se pede, body escopo, div e seu id e a tag
+
+            /*var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+            
+            btnElement.onclick = function(){
+                //document.querySelector('#h').style.backgroundColor = "red"; muda a cor do h1
+                var text = inputElement.value; // value pega o que a variavel esta armazenando
+
+                alert(text);
+
+            }
+            */
+
+            var linkElement = document.createElement('a'); // cria a tag especificada
+            linkElement.setAttribute('href', 'https://www.google.com'); //atribui para o elemento o valor passado no segundo parametro
+
+            var textElement = document.createTextNode('Acessar a google'); //Cria um texto para a variavel
+            linkElement.appendChild(textElement); // atribui textElement como filho de linkElement
+
+            containerElement = document.querySelector('#sla');
+            containerElement.appendChild(linkElement);
+            //containerElement.removeChild(inputElement);
+
+        </script>
+    </body>
+</html>

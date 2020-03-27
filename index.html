@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Testando JavaScripto</title>
+
+
+    </head>
+
+    <body>
+        <div><h1>Nada</h1></div>
+
+
+        <Script>
+            //Js
+            
+            //Questão 1
+            /*
+            var endereco = {
+
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+                
+            };
+
+            function dados(endereco){
+
+                return ("o usuário mora em " + endereco.cidade + "/" + endereco.uf + " no bairro "+
+                endereco.bairro + ", na rua " + endereco.rua + " com nº " + endereco.numero);
+            };
+
+            console.log(dados(endereco));
+            */
+
+
+            //---------------------------------------------------------------------------------
+
+
+            //Questão 2 
+            /*
+            function pares(x, y){
+
+                for(var i = x; i <= y; i++){
+                    if(i % 2 == 0){
+                        console.log(i);
+                    }
+                }
+            }
+            
+            pares(32, 321);
+
+            */
+
+            //---------------------------------------------------------------------------------
+
+            //Questão 3
+            /*
+            function temHabilidade (skills){
+
+                var existe = skills.indexOf("Javascript");
+
+                if (existe === -1){
+                    return console.log(false);
+                } else{
+                    return console.log(true);
+                }
+            }
+
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            temHabilidade(skills);
+            */
+
+            //---------------------------------------------------------------------------------
+
+            //Questão 4
+
+            function experiencia(anos){
+
+                if (anos => 0 && anos <= 1){
+                    return console.log("Iniciante");
+                } else if (anos > 1  && anos <= 3){
+                    return console.log("Intermediário");
+                } else if(anos > 3 && anos <= 6){
+                    return console.log("Avançado");
+                }else if(anos => 7){
+                    return console.log("Jedi Master");
+                }else{
+                    return console.log("Você é burro cara?");
+                }
+
+            }
+
+            var anosEstudo = 7;
+            experiencia(anosEstudo);
+
+        </Script>
+    </body>
+
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desafio JavaScripto</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        
+        <div class="box">
+
+        </div>
+
+        <button id="new">Gerar</button>
+        
+        <ul id='lista'>
+            <li>nada</li>
+            <li>nada2</li>
+        </ul>
+        
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+
+        <script>
+            //--------------------------- Primeira Questao --------------------------------
+            /*var buttonElement = document.querySelector("button#new");
+            
+            buttonElement.onclick = function(newDiv){
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute('class', 'caixas');
+                newDiv.style.backgroundColor = "green";
+                newDiv.style.height = '100px';
+                newDiv.style.width = '100px';
+                newDiv.onmouseenter = function(){
+                    newDiv.style.backgroundColor = getRandomColor();
+                }
+                document.body.appendChild(newDiv);
+
+            }
+            //----------------------------- Segunda Questao -----------------------------------
+            
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            */
+
+            //---------------------------- Terceira Questão -----------------------------------------
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var tam = nomes.length;
+
+            for(i = 0; i < tam; i++){
+                var liElements = document.createElement("li");
+                var textNode = document.createTextNode(nomes[i]);
+                liElements.appendChild(textNode);
+                document.getElementById('lista').appendChild(liElements);
+            }
+
+            
+            function adicionar(){
+                var liElements = document.createElement("li");
+                var liNode = document.createTextNode(document.querySelector("input[name=nome]").value);
+                liElements.appendChild(liNode);
+                document.getElementById('lista').appendChild(liElements);
+                document.querySelector("input[name=nome]").value = '';
+            }
+            
+            
+        </script>
+
+    </body>
+</html>
